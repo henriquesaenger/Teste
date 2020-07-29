@@ -1,0 +1,51 @@
+*{  /*fiz isso para tirar margens e paddings prévios, que deixavam uma margem acima do menu*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+a{
+    color: white;
+    font-size: 13px;
+}
+
+/*headermenu é a div que abrange todas as outras do componente menuzin*/
+.headermenu{    /*mudo a cor e dou uma altura pro menu*/
+    display: inline-block;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #652F9E;
+    
+}
+
+
+
+/*menu é a div que vai ser a lista de opções do componente menuzin*/
+.menu ul{
+    float:right;
+    margin-right:15px;
+}
+
+.menu li{
+    display: inline-block;
+    margin-left: 25px;
+    
+}
+
+.menu li a{
+    display: block;
+    padding:20px;
+
+}
+
+
+@media(max-width: 868px){
+    .menu li a{
+        display: none;
+    }
+
+    .headermenu{
+        height: 60px;
+    }
+}

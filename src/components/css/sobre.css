@@ -1,0 +1,257 @@
+*{  /*fiz isso para tirar margens e paddings prévios, que deixavam uma margem acima do menu*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+
+
+
+/*Container2 é a flexbox horizontal que contém as duas colunas da página "Sobre"*/
+.Container2{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:3%;
+    padding-top: 0px;  
+}
+
+/*Caixa eu uso pra me referir as divs que são colunas ao mesmo tempo, chamadas Vazia e descricao2   */
+.Caixa{
+    display: flex;
+    flex-direction: column;    
+    background-color: white;
+    border-radius: 6px;  
+    box-shadow: 1px 1px 1px 0px #A8A8A8;
+}
+
+/* Vazia é a div vazia que representa a coluna a direita em branco */
+.Vazia{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 40%;
+    background-color: white;
+}
+
+
+
+/* descricao2 é a div que representa a coluna a direita onde irão ficar as informações do professor */
+.descricao2{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    height: 100%;
+    align-items: center;
+}
+
+
+/*flexbox-descricao é uma flexbox de 3 elementos na horizontal, que eu fiz pensando no cabeçalho do professor   */
+.flexbox-descricao{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    height:100%;
+    border-bottom: 2px solid #652F9E;
+    padding-bottom: 5%;
+    padding-top: 5%;       
+}
+
+
+
+/* Foto2 é a foto do professor presente na flexbox-descricao de cabeçalho*/
+.foto2{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.foto2 img {
+    width: 75%;
+    height: 75%;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+/*infos2 é a div que guardo as informações do professor no cabeçalho(flexbox-descricao)*/
+.infos2{
+    color: #652F9E;
+    width:100%;
+}
+.infos2 p{
+
+    font-size: 15px;
+}
+
+
+/*nome2 é o nome do professor presente na descrição do cabeçalho*/
+.nome2 {                    /*separei nome2 por a posição do nome ficar relativamente separado das demais informações*/
+    color: #652F9E;       /*e possibilitava mais liberdade pra modificar a posição a meu ver*/            
+    font-size: 25px;
+    text-transform: capitalize;
+}
+
+/*botoes2 é a div onde estão presentes os 2 botões no cabeçalho*/
+.botoes2{
+    display: flex;
+    flex-direction: column;
+}
+.botoes2 button{
+    margin: 5px;
+    max-height: 35px;
+    max-width: 140px;
+    min-width: 13px;
+    min-height:15px;
+    
+}
+
+
+/*env_msg2 é o botão de enviar mensagem*/
+.env_msg2{
+  color: #652F9E;
+  background-color: white;
+  height: 35px;
+  width: 140px;
+  font-size: 10px;
+  box-shadow: lightgray 2px 3px 2px;
+  text-shadow: lightgray 2px 3px 2px;
+  border-radius: 5px;
+  text-align-last: center;
+  border: 1px solid #652F9E;
+}
+/*agend é o botão de agendar aula*/
+.agend{
+  color: #ffffff;
+  background-color: #652F9E;
+  height: 35px;
+  width: 140px;
+  font-size: 10px;
+  box-shadow: lightgray 2px 3px 2px;
+  text-shadow: #4F4F4F 2px 3px 2px;
+  border-radius: 5px;
+  text-align-last: center;
+}
+
+
+/*Sobre-Professor é a div que representa a parte "Sobre o professor" logo abaixo do cabeçalho*/
+.Sobre-Professor{
+    width: 80%;
+    padding-top: 3%;
+    color: #652F9E;
+}
+
+.Sobre-Professor p{
+    padding-bottom: 2%;
+}
+.Sobre-Professor p b{
+    font-size: 22px;
+}
+
+/*Sobre-Materias é a div que representa a parte sobre as matérias que fica logo abaixo da parte "Sobre o Professor"*/
+.Sobre-Materias{
+    width: 80%;
+    padding-top: 3%;
+    color: #652F9E;
+}
+.Sobre-Materias p{
+    padding-bottom: 2%;
+}
+.Sobre-Materias p b{
+    font-size: 22px;
+    text-transform: initial;
+}
+
+
+
+/*Alunos é a div para comentários de alunos, chamada de "O que os alunos falam*/
+.Alunos{
+    width: 80%;
+    padding-top: 3%;
+    color: #652F9E;
+}
+.Alunos p{
+    padding-bottom: 4%;
+    text-transform: initial;
+}
+.Alunos p b{
+    font-size: 22px;
+    text-transform: initial;
+}
+
+/* deixa os botões de baixo da parte responsiva da página invisíveis*/ 
+.botoes2r{
+    display: none;
+}
+
+@media(max-width: 986px){
+.botoes2{
+    display: none;
+}
+
+.botoes2r{
+    display: flex;
+    flex-direction: row;
+}
+
+.botoes2r button{
+    margin: 5px;
+    max-height: 35px;
+    max-width: 140px;
+    min-width: 13px;
+    min-height:15px;
+}
+
+.env_msg2r{
+  color: #652F9E;
+  background-color: white;
+  height: 35px;
+  width: 140px;
+  font-size: 10px;
+  box-shadow: lightgray 2px 3px 2px;
+  text-shadow: lightgray 2px 3px 2px;
+  border-radius: 5px;
+  text-align-last: center;
+  border: 1px solid #652F9E;
+}
+.agendr{
+  color: #ffffff;
+  background-color: #652F9E;
+  height: 35px;
+  width: 140px;
+  font-size: 10px;
+  box-shadow: lightgray 2px 3px 2px;
+  text-shadow: #4F4F4F 2px 3px 2px;
+  border-radius: 5px;
+  text-align-last: center;
+}
+
+.descricao2{
+    width: 100%;
+    border-bottom: ;
+}
+.vazio{
+    display: none;
+    width: 0;
+}
+body{
+    background-color: white;
+  
+  }
+
+.Caixa{
+
+    box-shadow: 0px 1px 0px 0px #A8A8A8;
+}
+
+}

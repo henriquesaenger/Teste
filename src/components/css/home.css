@@ -1,0 +1,97 @@
+*{  /*fiz isso para tirar margens e paddings prévios, que deixavam uma margem acima do menu*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  
+  /*deixa todo o fundo em lightgray*/
+  body{
+    background-color: lightgray;
+  
+  }
+  
+  select {      /*Coloquei pra tirar a seta padrão dos selects*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+  }
+  
+  
+  /*prof é a div que contém a frase "Os melhores professores" logo abaixo do Menu*/
+  .prof{        /* Escrevo no centro da tela o texto dos professores com sombreado*/
+    color:#652F9E;
+    font-size: 22px;
+    text-shadow: lightgray 2px 3px 2px;
+    height: 90px;
+    text-align: center;
+    background-color: white;
+  }
+  .prof p{
+    position: relative;
+    width: 100%;
+    top: 50%;
+  }
+  
+  /*custom-select é a div que abrange todos selects de baixo de prof juntamente com o botão "pesquisar"*/
+  .custom-select{
+    text-align: center;
+    background-color: white;
+    height:fit-content;
+    padding:10px;
+  }
+  
+  .custom-select ul li{
+    display: inline-block;
+    padding-left: 40px;
+
+  }
+  
+  .custom-select ul li select{
+    height: 30px;
+    width: 130px;
+    background-color: #ffffff;
+    color: #652F9E;
+    box-shadow: lightgray 2px 3px 2px;
+    text-shadow: lightgray 2px 3px 2px;
+    border-radius: 5px;
+    border:1px solid #652F9E;
+    text-align-last: center;
+
+
+  }
+  
+
+  /*pesquisar é o botão de pesquisa da div custom-select, e está logo a direita dos 3 selects dependentes*/
+  .pesquisar{
+    color: #ffffff;
+    background-color: #652F9E;
+    height: 30px;
+    width: 130px;
+    font-size: 10px;
+    box-shadow: lightgray 2px 3px 2px;
+    text-shadow: #4F4F4F 2px 3px 2px;
+    border-radius: 5px;
+    text-align-last: center;
+  
+  }
+  
+
+  @media(max-width: 868px){
+    .custom-select ul li{
+      display: flex;
+      flex-direction: column;
+      padding-top: 1%;
+    }
+    .custom-select{
+    }
+    *{
+      align-items: center
+    }
+  }
+  
+  
+  
+  

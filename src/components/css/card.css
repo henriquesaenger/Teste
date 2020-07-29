@@ -1,0 +1,155 @@
+/*row é a div que contém o card inteiro sobre o professor que será pesquisado*/
+.row {
+  flex-direction: row;
+  align-items: center;
+  background-color: white;  
+  border-radius: 10px;
+  padding: 1%;
+}
+
+/*foto é a div da foto do professor presente na parte esquerda do card*/
+.foto {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.foto img {
+  min-width: 100%;
+  min-height: 100%;
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+/*nome é a div para o nome do professor que tem um tamanho de fonte diferenciado*/
+.nome{
+  font-size: 25px;
+  text-transform: capitalize;
+}
+
+/*info é a div para as informações do professor presentes no card logo ao lado direito da foto*/
+.info{
+  color:#652F9E;
+  padding-left: 10px;
+  padding-right:30px;
+}
+
+/*controla a responsividade do cartão*/
+.container {
+  max-width: 70%;
+  max-height: 100%;
+  margin: 50px auto;
+	display: flex;
+	border: 1px solid #ffffff;
+}
+
+/*descricao é a div que apresenta a descrição do professor logo ao lado das informações sobre ele*/
+.descricao{
+  color: #652F9E;
+  width:50%;
+  padding-right:30px;
+  padding-left: 10px;
+  border-left: 2px solid #652F9E; 
+}
+.descricao p{
+  max-width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/*controla o tamanho da fonte do corpo do texto presente na descrição*/
+.text_desc p{
+  font-size: 20px;
+}
+/*aumenta a área clicável dos botões*/
+button a{
+  margin:300px;
+}
+
+
+.env_msg a{
+ margin-bottom:10px;
+}
+/*botão de enviar mensagem para o professor*/
+.env_msg{
+  color: #ffffff;
+  background-color: #652F9E;
+  height: 30px;
+  width: 130px;
+  font-size: 10px;
+  box-shadow: lightgray 2px 3px 2px;
+  text-shadow: #4F4F4F 2px 3px 2px;
+  border-radius: 5px;
+  text-align-last: center;
+}
+/*dá um espaçamento entre os botões*/
+.botoes button{
+  margin: 5px;
+
+}
+
+.infor{
+
+  display: none;
+}
+
+
+
+/*botão "ver mais"*/
+.ver_mais{
+  color: #652F9E;
+  background-color: white;
+  height: 30px;
+  width: 130px;
+  font-size: 10px;
+  box-shadow: lightgray 2px 3px 2px;
+  text-shadow: lightgray 2px 3px 2px;
+  border-radius: 5px;
+  text-align-last: center;
+  border: 1px solid #652F9E;
+}
+
+
+@media(max-width: 868px){
+
+  .row {
+    flex-direction: column;
+    border-top: 10px solid lightgray;
+    border-bottom: 10px solid lightgray;
+  }
+
+  .descricao{
+    border: none; 
+  }
+
+  .foto{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+  .info{
+    padding-top: 4%;
+  }
+  .infor{
+    color:#652F9E;
+    padding-left: 10px;
+    padding-right:30px;
+  }
+  .descricao{
+    padding-top: 5%;
+  }
+  .botoes{
+    padding-top: 3%;
+  }
+
+}
